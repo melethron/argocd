@@ -18,6 +18,14 @@ spec:
     repoURL: https://github.com/melethron/app1.git
     targetRevision: HEAD
     path: helm/busybox
+    helm:
+      valueFiles:
+        - values/app1.yaml
+      parameters:
+        - name: "replicaCount"
+          value: "5"
+          forceString: true # ensures that value is treated as a string
+
 
   syncPolicy:
     automated:
