@@ -8,7 +8,7 @@ metadata:
   labels:
     name: app1
 spec:
-  project: app1
+  project: default
 
   destination:
     server: https://kubernetes.default.svc
